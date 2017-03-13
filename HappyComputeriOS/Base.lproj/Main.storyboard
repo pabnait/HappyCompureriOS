@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gxz-7T-lwJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XXp-NO-O6d">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Blance-->
         <scene sceneID="Nxn-1l-gkV">
             <objects>
-                <viewController id="Oib-JL-nIH" sceneMemberID="viewController">
+                <viewController id="Oib-JL-nIH" customClass="Blance" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eo0-ap-7vu"/>
                         <viewControllerLayoutGuide type="bottom" id="XfF-OQ-zfU"/>
@@ -108,10 +108,10 @@
             </objects>
             <point key="canvasLocation" x="722" y="1487"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Extra Cost-->
         <scene sceneID="TEF-1V-pZq">
             <objects>
-                <tableViewController id="Kgv-0N-s10" sceneMemberID="viewController">
+                <tableViewController id="Kgv-0N-s10" customClass="Extra_Cost" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="TRW-vT-kMr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="671" y="2284"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Due Blance-->
         <scene sceneID="b75-0S-smy">
             <objects>
-                <tableViewController id="0DT-tp-RMh" sceneMemberID="viewController">
+                <tableViewController id="0DT-tp-RMh" customClass="Due_Blance" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="I6M-un-41D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="1418" y="2284"/>
         </scene>
-        <!--View Controller-->
+        <!--Sell-->
         <scene sceneID="b5w-cg-ZWZ">
             <objects>
-                <viewController id="e5P-NL-oCg" sceneMemberID="viewController">
+                <viewController id="e5P-NL-oCg" customClass="Sell" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cAG-OU-VCZ"/>
                         <viewControllerLayoutGuide type="bottom" id="5zC-YR-4DF"/>
@@ -248,10 +248,10 @@
             </objects>
             <point key="canvasLocation" x="-803" y="1451"/>
         </scene>
-        <!--View Controller-->
+        <!--Customer Select Product-->
         <scene sceneID="3Uv-be-lyR">
             <objects>
-                <viewController id="3LO-fZ-hHU" sceneMemberID="viewController">
+                <viewController id="3LO-fZ-hHU" customClass="CustomerSelectProduct" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eg1-tW-kEe"/>
                         <viewControllerLayoutGuide type="bottom" id="WRO-Qe-aiy"/>
@@ -501,12 +501,13 @@
             </objects>
             <point key="canvasLocation" x="-803" y="2284"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tabbar-->
         <scene sceneID="UM8-3j-2pp">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gxz-7T-lwJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarHome" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gxz-7T-lwJ" customClass="Tabbar" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="nmh-XA-TxI">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -520,12 +521,39 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dO-dn-8wh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="-148"/>
+            <point key="canvasLocation" x="278" y="-145"/>
         </scene>
-        <!--View Controller-->
+        <!--Home-->
+        <scene sceneID="wce-0U-e01">
+            <objects>
+                <viewController id="XXp-NO-O6d" customClass="Home" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Xf-Z5-DfA"/>
+                        <viewControllerLayoutGuide type="bottom" id="8N1-b4-vZN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BHB-gu-Bft">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Happy Computer &amp; Netwok." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erK-6m-hcQ">
+                                <rect key="frame" x="0.0" y="176" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvJ-5q-bD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-742.5" y="-164.78873239436621"/>
+        </scene>
+        <!--Input-->
         <scene sceneID="iBj-fq-gfo">
             <objects>
-                <viewController id="xeP-gH-gjA" sceneMemberID="viewController">
+                <viewController id="xeP-gH-gjA" customClass="Input" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W9s-yL-grf"/>
                         <viewControllerLayoutGuide type="bottom" id="nlE-aO-vo6"/>
@@ -606,10 +634,10 @@
             </objects>
             <point key="canvasLocation" x="-73" y="1450"/>
         </scene>
-        <!--View Controller-->
+        <!--Provider Select Product-->
         <scene sceneID="j1p-9L-pLX">
             <objects>
-                <viewController id="coN-6c-bBb" sceneMemberID="viewController">
+                <viewController id="coN-6c-bBb" customClass="ProviderSelectProduct" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oyG-Lc-z9z"/>
                         <viewControllerLayoutGuide type="bottom" id="2mJ-IW-gdi"/>
@@ -859,10 +887,10 @@
             </objects>
             <point key="canvasLocation" x="-73" y="2262"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Skack-->
         <scene sceneID="MUc-LR-I0u">
             <objects>
-                <tableViewController id="cHd-dR-viK" sceneMemberID="viewController">
+                <tableViewController id="cHd-dR-viK" customClass="Skack" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M5k-MK-wV8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -888,10 +916,10 @@
             </objects>
             <point key="canvasLocation" x="1568" y="1469"/>
         </scene>
-        <!--Table View Controller-->
+        <!--People-->
         <scene sceneID="jNE-MF-Kh8">
             <objects>
-                <tableViewController id="Rd7-v0-sUr" sceneMemberID="viewController">
+                <tableViewController id="Rd7-v0-sUr" customClass="People" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" id="wfp-nx-a7W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -928,7 +956,7 @@
         <!--Sell-->
         <scene sceneID="2PP-tz-Bvw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qUo-s6-JEQ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qUo-s6-JEQ" customClass="SellNavi" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Sell" image="005-shopping-cart-1" id="RCQ-Jc-69d"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y7C-xG-w8Y">
@@ -947,7 +975,7 @@
         <!--Blance-->
         <scene sceneID="h2l-N0-cz9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9vr-Z0-xT7" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9vr-Z0-xT7" customClass="BlanceNavi" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Blance" image="004-coin" id="1aV-Fe-opo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uur-T9-OCQ">
@@ -966,7 +994,7 @@
         <!--Input-->
         <scene sceneID="qgN-PZ-HhQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ZG-hR-K1x" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ZG-hR-K1x" customClass="InputNavi" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Input" image="003-compose" id="WCL-bE-iWC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5kz-dS-o2j">
@@ -985,7 +1013,7 @@
         <!--Stack-->
         <scene sceneID="MlP-nF-VoZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cjO-t9-RdR" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cjO-t9-RdR" customClass="SellNavi" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Stack" image="002-real-estate" id="jDG-zq-XSV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hF0-GS-SX7">
