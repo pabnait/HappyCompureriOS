@@ -59,10 +59,10 @@ class People: UITableViewController {
     
     
     
-    var ProviderName = ["Entaz","Tanvir", "Islam", "Abid Hasan", "Aminul Islam","Roton","Zahidul", "Belal", "Ratul", "Jibon"]
+    var ProviderName = ["Carrick","Brock","Benedict","David","Carter","Abbott","Abbott","Alexander","Cyril","Alexander"]
     
     
-    var ProviderAddress = ["USA","Miapara", "Debottor", "Dhaka", "Pabna","Tebunia","Beruan", "Miapara", "Atgharia", "Pabna"]
+    var ProviderAddress = ["USA","UK", "Australia", "Germany", "UAE","Singapore","Honkong", "Newsland", "India", "Bangladesh"]
     
     
     
