@@ -9,6 +9,76 @@
 import UIKit
 
 class People: UITableViewController {
+    
+ 
+    
+    @IBOutlet var PeopleSegment: UISegmentedControl!
+    
+    
+    
+    
+    
+    var CustomerName1 = ["Rana","Tanvir", "Islam", "Abid Hasan", "Aminul Islam","Roton","Zahidul", "Belal", "Ratul", "Jibon"]
+    
+    
+    var CustomerAddress1 = ["Pabna","Miapara", "Debottor", "Dhaka", "Pabna","Tebunia","Beruan", "Miapara", "Atgharia", "Pabna"]
+    
+    
+    
+    var CustomerAmmount1 = ["$65","$678", "$568", "$8678", "$778","$789","$768", "$768", "$657", "$89"]
+    
+    
+    var CustomerInvoice1 = ["4435","7678", "5768", "8678", "7478","9789","1268", "7668", "8657", "8789"]
+    
+    
+    var CustomerCell1 = ["0174131671","01711726384","01744342345","0713254332","01788124364","01734534534","01945353636","01941534346","0175442353","0183454632"]
+    
+    
+    
+    
+    
+    
+
+    
+    var CustomerName = ["Rana","Tanvir", "Islam", "Abid Hasan", "Aminul Islam","Roton","Zahidul", "Belal", "Ratul", "Jibon"]
+    
+    
+     var CustomerAddress = ["Pabna","Miapara", "Debottor", "Dhaka", "Pabna","Tebunia","Beruan", "Miapara", "Atgharia", "Pabna"]
+    
+    
+    
+    var CustomerAmmount = ["$65","$678", "$568", "$8678", "$778","$789","$768", "$768", "$657", "$89"]
+    
+    
+    var CustomerInvoice = ["4435","7678", "5768", "8678", "7478","9789","1268", "7668", "8657", "8789"]
+    
+    
+    var CustomerCell = ["0174131671","01711726384","01744342345","0713254332","01788124364","01734534534","01945353636","01941534346","0175442353","0183454632"]
+    
+    
+    
+    
+    
+    var ProviderName = ["Entaz","Tanvir", "Islam", "Abid Hasan", "Aminul Islam","Roton","Zahidul", "Belal", "Ratul", "Jibon"]
+    
+    
+    var ProviderAddress = ["USA","Miapara", "Debottor", "Dhaka", "Pabna","Tebunia","Beruan", "Miapara", "Atgharia", "Pabna"]
+    
+    
+    
+    var ProviderAmmount = ["$100","$678", "$568", "$8678", "$778","$789","$768", "$768", "$657", "$89"]
+    
+    
+    var ProviderInvoice = ["100","7678", "5768", "8678", "7478","9789","1268", "7668", "8657", "8789"]
+    
+    
+    var ProviderCell = ["01731 5533","01711726384","01744342345","0713254332","01788124364","01734534534","01945353636","01941534346","0175442353","0183454632"]
+    
+    
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,67 +99,62 @@ class People: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return CustomerName.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PeopleCell", for: indexPath) as! PeopleCell
 
-        // Configure the cell...
+        cell.CustomerNameLabel.text! = CustomerName[indexPath.row]
+        cell.CustomerAmmountLabel.text! = CustomerAmmount[indexPath.row]
+        cell.CustomerAddressLabel.text! = CustomerAddress[indexPath.row]
+        cell.CustomerCellLabel.text! = CustomerCell[indexPath.row]
+        cell.CustomerInvoiceLabel.text! = CustomerInvoice[indexPath.row]
+        
+        
+        
+        
+        
 
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+   
+    @IBAction func OnSegmentButtonClicked(_ sender: Any) {
+        
+        if PeopleSegment.selectedSegmentIndex == 1{
+            
+            CustomerName = ProviderName
+            CustomerInvoice = ProviderInvoice
+            CustomerCell = ProviderCell
+            CustomerAmmount = ProviderAmmount
+            CustomerAddress = ProviderAddress
+            
+            self.tableView.reloadData()
+            
+       
+            
+            
+        }
+        
+        else if PeopleSegment.selectedSegmentIndex == 0 {
+            
+            
+            CustomerName = CustomerName1
+            CustomerInvoice = CustomerInvoice1
+            CustomerCell = CustomerCell1
+            CustomerAmmount = CustomerAmmount1
+            CustomerAddress = CustomerAddress1
+            
+            self.tableView.reloadData()
+            
+        }
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

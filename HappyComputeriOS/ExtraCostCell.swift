@@ -10,6 +10,13 @@ import UIKit
 
 class ExtraCostCell: UITableViewCell {
 
+    @IBOutlet var ExtraCostByLabel: UILabel!
+    @IBOutlet var ExtraCostTitleLabel: UILabel!
+    @IBOutlet var ExtraCostAmmountLabel: UILabel!
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

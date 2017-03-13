@@ -9,15 +9,23 @@
 import UIKit
 
 class Extra_Cost: UITableViewController {
+    
+    var ExtraCostTitle = ["Dinnar","Party Cost", "Banner Cost", "Peole Hire Fee", "Acadamey Cost","Dinnar","Party Cost", "Banner Cost", "Peole Hire Fee", "Acadamey Cost"]
+    
+     var ExtraCostBy = ["Rana","Tanvir", "Islam", "Abid Hasan", "Aminul Islam","Roton","Zahidul", "Belal", "Ratul", "Jibon"]
+    
+    
+    
+     var ExtraCostAmmount = ["$65","$678", "$568", "$8678", "$778","$789","$768", "$768", "$657", "$89"]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Extra Cost History"
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +37,33 @@ class Extra_Cost: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return ExtraCostTitle.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraCostCell", for: indexPath) as! ExtraCostCell
+        
+        
+        
+        cell.ExtraCostTitleLabel.text! = ExtraCostTitle[indexPath.row]
+        cell.ExtraCostByLabel.text! = ExtraCostBy[indexPath.row]
+        cell.ExtraCostAmmountLabel.text! = ExtraCostAmmount[indexPath.row]
+        
+        
+       
+        
+        
+        
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.

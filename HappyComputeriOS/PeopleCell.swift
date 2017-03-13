@@ -9,6 +9,16 @@
 import UIKit
 
 class PeopleCell: UITableViewCell {
+    
+    
+    @IBOutlet var CustomerInvoiceLabel: UILabel!
+    @IBOutlet var CustomerAmmountLabel: UILabel!
+    @IBOutlet var CustomerNameLabel: UILabel!
+    @IBOutlet var CustomerAddressLabel: UILabel!
+    
+    @IBOutlet var CustomerCellLabel: UILabel!
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
