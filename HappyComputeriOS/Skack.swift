@@ -9,16 +9,17 @@
 import UIKit
 
 class Skack: UITableViewController {
+    
+    var StackProduct = ["Mouse USB", "Keyboard 3.0","Motherboard Intel","Samsung Led Display", "HP Laptop", "Dell Laptop", "Printer","Mouse USB", "Keyboard 3.0","Motherboard Intel","Samsung Led Display", "HP Laptop", "Dell Laptop", "Printer","Mouse USB", "Keyboard 3.0","Motherboard Intel","Samsung Led Display", "HP Laptop", "Dell Laptop", "Printer"]
+    
+    var StackProductAmmount = ["345", "56","5435","3453", "855", "4365", "3453","345", "56","5435","3453", "855", "4365", "3453","345", "56","5435","3453", "855", "4365", "3453"]
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -29,23 +30,24 @@ class Skack: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return StackProduct.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StackCell", for: indexPath) as! StackCell
 
-        // Configure the cell...
+        cell.ProductName.text! = StackProduct[indexPath.row]
+        cell.ProductAmmountCell.text! = StackProductAmmount[indexPath.row]
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

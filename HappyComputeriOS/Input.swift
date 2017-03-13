@@ -8,12 +8,30 @@
 
 import UIKit
 
-class Input: UIViewController {
+class Input: UIViewController,UITextFieldDelegate {
+    
+    @IBOutlet var PriceValueLabel: UILabel!
+    @IBOutlet var PriceLabel: UILabel!
+    @IBOutlet var ProviderNameTextField: UITextField!
+    @IBOutlet var ProviderCellTextField: UITextField!
+    @IBOutlet var ProviderAddressTextfield: UITextField!
+    @IBOutlet var ProviderInvoiceTextfield: UITextField!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        ProviderNameTextField.delegate = self
+        ProviderCellTextField.delegate = self
+        ProviderAddressTextfield.delegate = self
+        ProviderInvoiceTextfield.delegate = self
+        
+        self.PriceLabel.isHidden = true
+        self.PriceValueLabel.isHidden = true
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +39,11 @@ class Input: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+        textField.resignFirstResponder()
+        return true
     }
-    */
-
+    
 }
+
+

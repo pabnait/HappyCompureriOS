@@ -8,13 +8,36 @@
 
 import UIKit
 
-class Sell: UIViewController {
+class Sell: UIViewController, UITextFieldDelegate {
 
+   
+    @IBOutlet var CustomerPriceLabel: UILabel!
+    @IBOutlet var CustomerPriceLabelValue: UILabel!
+    @IBOutlet var CustomerName:UITextField!
+    @IBOutlet var CustomerAddress:UITextField!
+    @IBOutlet var CustomerCell:UITextField!
+    @IBOutlet var CustomerInvioce:UITextField!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        CustomerName.delegate = self
+        CustomerAddress.delegate = self
+        CustomerCell.delegate = self
+        CustomerInvioce.delegate = self
+        
+        
+        self.CustomerPriceLabel.isHidden = true
+        self.CustomerPriceLabelValue.isHidden = true
+        
+        
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -22,14 +45,11 @@ class Sell: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+        textField.resignFirstResponder()
+        return true
     }
-    */
 
 }
+
+

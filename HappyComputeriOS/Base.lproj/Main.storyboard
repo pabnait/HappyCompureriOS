@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Blance-->
+        <!--Blance History-->
         <scene sceneID="Nxn-1l-gkV">
             <objects>
                 <viewController id="Oib-JL-nIH" customClass="Blance" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,7 +102,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Hhd-lg-k6h"/>
+                    <navigationItem key="navigationItem" title="Blance History" id="Hhd-lg-k6h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SjO-MQ-3H8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,18 +140,54 @@
         <scene sceneID="b75-0S-smy">
             <objects>
                 <tableViewController id="0DT-tp-RMh" customClass="Due_Blance" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="I6M-un-41D">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" id="I6M-un-41D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hAo-Vg-M97">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DueCell" rowHeight="53" id="hAo-Vg-M97" customClass="DueBlanceCell" customModule="HappyComputeriOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="53"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hAo-Vg-M97" id="zZS-pN-cvt">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZh-5R-FKM">
+                                            <rect key="frame" x="9" y="0.0" width="125" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPC-RD-xxh">
+                                            <rect key="frame" x="10" y="24" width="155" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ammount" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQd-3E-74C">
+                                            <rect key="frame" x="219" y="0.0" width="93" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Invoice" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Skk-7c-hrc">
+                                            <rect key="frame" x="251" y="24" width="61" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="DueCoustomerNameLabel" destination="jZh-5R-FKM" id="cdL-k0-VBF"/>
+                                    <outlet property="DueCustomerAmmountLabel" destination="NQd-3E-74C" id="iiF-gJ-qrj"/>
+                                    <outlet property="DueCustomerCellLabel" destination="qPC-RD-xxh" id="HP0-ot-MM0"/>
+                                    <outlet property="DueCustomerInvoiceLabel" destination="Skk-7c-hrc" id="NEB-Bh-5b3"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -162,9 +198,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejN-Yd-5ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1418" y="2284"/>
+            <point key="canvasLocation" x="1417.5" y="2283.8028169014083"/>
         </scene>
-        <!--Sell-->
+        <!--Sell Product-->
         <scene sceneID="b5w-cg-ZWZ">
             <objects>
                 <viewController id="e5P-NL-oCg" customClass="Sell" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -242,7 +278,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="kUW-NR-Sd8"/>
+                    <navigationItem key="navigationItem" title="Sell Product" id="kUW-NR-Sd8"/>
+                    <connections>
+                        <outlet property="CustomerAddress" destination="eqq-8M-dbc" id="krZ-LY-hbD"/>
+                        <outlet property="CustomerCell" destination="phA-jh-Jk6" id="aKa-Fr-Scq"/>
+                        <outlet property="CustomerInvioce" destination="hbA-o2-xqL" id="DVv-Lc-cpw"/>
+                        <outlet property="CustomerName" destination="Fvo-2B-B7x" id="ffC-QN-CFz"/>
+                        <outlet property="CustomerPriceLabel" destination="wNc-J5-7BO" id="2UI-RX-qNV"/>
+                        <outlet property="CustomerPriceLabelValue" destination="Lv8-ZR-MOJ" id="Inb-8E-knT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YTR-yL-FgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -550,7 +594,7 @@
             </objects>
             <point key="canvasLocation" x="-742.5" y="-164.78873239436621"/>
         </scene>
-        <!--Input-->
+        <!--Input Product-->
         <scene sceneID="iBj-fq-gfo">
             <objects>
                 <viewController id="xeP-gH-gjA" customClass="Input" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -628,7 +672,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Fzp-i1-ihK"/>
+                    <navigationItem key="navigationItem" title="Input Product" id="Fzp-i1-ihK"/>
+                    <connections>
+                        <outlet property="PriceLabel" destination="RwP-yB-Vke" id="lgw-1y-bwM"/>
+                        <outlet property="PriceValueLabel" destination="8RU-wM-yYY" id="62v-9u-YcS"/>
+                        <outlet property="ProviderAddressTextfield" destination="NcU-RZ-XXe" id="aaI-d5-UrM"/>
+                        <outlet property="ProviderCellTextField" destination="Xsi-ee-EMY" id="hsM-3e-hmq"/>
+                        <outlet property="ProviderInvoiceTextfield" destination="5Cz-tg-cpl" id="atB-yr-Mft"/>
+                        <outlet property="ProviderNameTextField" destination="d5e-ix-QUS" id="x5l-c5-J0Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y62-kg-Mx9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -887,22 +939,43 @@
             </objects>
             <point key="canvasLocation" x="-73" y="2262"/>
         </scene>
-        <!--Skack-->
+        <!--Stack Product-->
         <scene sceneID="MUc-LR-I0u">
             <objects>
                 <tableViewController id="cHd-dR-viK" customClass="Skack" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M5k-MK-wV8">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="28" sectionFooterHeight="28" id="M5k-MK-wV8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VLh-Yy-frD">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StackCell" rowHeight="47" id="VLh-Yy-frD" customClass="StackCell" customModule="HappyComputeriOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="47"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VLh-Yy-frD" id="Kjc-Wd-VlQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="46"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qQ-3D-g6a">
+                                            <rect key="frame" x="8" y="11" width="232" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="56765" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjy-H4-HOI">
+                                            <rect key="frame" x="241" y="11" width="71" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ProductAmmount" destination="sjy-H4-HOI" id="cZ7-yF-ri4"/>
+                                    <outlet property="ProductAmmountCell" destination="sjy-H4-HOI" id="dM2-p1-jnm"/>
+                                    <outlet property="ProductName" destination="7qQ-3D-g6a" id="llD-60-AfO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -910,11 +983,11 @@
                             <outlet property="delegate" destination="cHd-dR-viK" id="ZNh-Ni-bbF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="eQx-NA-PLq"/>
+                    <navigationItem key="navigationItem" title="Stack Product" id="eQx-NA-PLq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHG-sa-Xae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568" y="1469"/>
+            <point key="canvasLocation" x="1567.5" y="1468.3098591549297"/>
         </scene>
         <!--People-->
         <scene sceneID="jNE-MF-Kh8">
@@ -947,7 +1020,7 @@
                             <outlet property="delegate" destination="Rd7-v0-sUr" id="oXy-ol-sYW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8yg-j8-Y6c"/>
+                    <navigationItem key="navigationItem" title="People" id="8yg-j8-Y6c"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p76-Ug-x1R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

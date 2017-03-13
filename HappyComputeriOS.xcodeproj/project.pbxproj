@@ -25,6 +25,7 @@
 		944A10E01E7651A700530AC3 /* InputNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10DF1E7651A700530AC3 /* InputNavi.swift */; };
 		944A10E21E7651B900530AC3 /* BlanceNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10E11E7651B900530AC3 /* BlanceNavi.swift */; };
 		944A10E41E7654D300530AC3 /* StackNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10E31E7654D300530AC3 /* StackNavi.swift */; };
+		944A10E61E767FD200530AC3 /* StackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10E51E767FD200530AC3 /* StackCell.swift */; };
 		94A8010F1E75B65300A234AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8010E1E75B65300A234AC /* AppDelegate.swift */; };
 		94A801141E75B65400A234AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A801121E75B65400A234AC /* Main.storyboard */; };
 		94A801161E75B65400A234AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A801151E75B65400A234AC /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		944A10DF1E7651A700530AC3 /* InputNavi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputNavi.swift; sourceTree = "<group>"; };
 		944A10E11E7651B900530AC3 /* BlanceNavi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlanceNavi.swift; sourceTree = "<group>"; };
 		944A10E31E7654D300530AC3 /* StackNavi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackNavi.swift; sourceTree = "<group>"; };
+		944A10E51E767FD200530AC3 /* StackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackCell.swift; sourceTree = "<group>"; };
 		94A8010B1E75B65300A234AC /* HappyComputeriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyComputeriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A8010E1E75B65300A234AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94A801131E75B65400A234AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				94A8010E1E75B65300A234AC /* AppDelegate.swift */,
 				94A801121E75B65400A234AC /* Main.storyboard */,
+				944A10E51E767FD200530AC3 /* StackCell.swift */,
 				944A10E31E7654D300530AC3 /* StackNavi.swift */,
 				944A10DD1E76519500530AC3 /* SellNavi.swift */,
 				944A10DF1E7651A700530AC3 /* InputNavi.swift */,
@@ -244,6 +247,7 @@
 				TargetAttributes = {
 					94A8010A1E75B65200A234AC = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = A94WMW47U9;
 						ProvisioningStyle = Automatic;
 					};
 					94A8011E1E75B65400A234AC = {
@@ -322,6 +326,7 @@
 				944A10DE1E76519500530AC3 /* SellNavi.swift in Sources */,
 				944A10D81E7650E100530AC3 /* ProviderSelectProduct.swift in Sources */,
 				944A10C21E764EA800530AC3 /* Home.swift in Sources */,
+				944A10E61E767FD200530AC3 /* StackCell.swift in Sources */,
 				944A10C41E764EC000530AC3 /* Input.swift in Sources */,
 				944A10E41E7654D300530AC3 /* StackNavi.swift in Sources */,
 				94A8010F1E75B65300A234AC /* AppDelegate.swift in Sources */,
@@ -480,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A94WMW47U9;
 				INFOPLIST_FILE = HappyComputeriOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mazharul.HappyComputeriOS;
@@ -492,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = A94WMW47U9;
 				INFOPLIST_FILE = HappyComputeriOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Mazharul.HappyComputeriOS;

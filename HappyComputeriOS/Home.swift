@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Home: UIViewController {
+class Home: UIViewController,UITextFieldDelegate {
 
     
     
@@ -35,7 +35,7 @@ class Home: UIViewController {
         super.viewDidLoad()
         
         
-        self.navigationItem.title = "Sign In"
+        self.title = "Sell Product"
         
         self.view.backgroundColor = UIColor(colorLiteralRed: 0/255, green: 116/255, blue: 196/255, alpha: 1)
         
@@ -47,13 +47,18 @@ class Home: UIViewController {
         
        
         
+        PassTextField.delegate = self
+        UserTextField.delegate = self
+        
+        
+        
         
         // User Text Field
         
         UserTextField.frame = CGRect(x: 85, y: 223, width: 198, height: 42)
         AddminLogo.frame = CGRect(x: 46, y: 235, width: 20, height: 20)
         AddminLogo.image = UIImage(named: "Admin")
-        UserTextField.placeholder = "Username"
+        UserTextField.placeholder = "Email"
         
         UserTextField.backgroundColor = UIColor(colorLiteralRed: 255, green: 255, blue: 255, alpha: 255)
         
@@ -163,6 +168,11 @@ class Home: UIViewController {
         print("Working !")
     }
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool { //delegate method
+        textField.resignFirstResponder()
+        return true
+    }
     
     
 }

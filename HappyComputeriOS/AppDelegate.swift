@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Navigation bar Color And Text Color
         
         UINavigationBar.appearance().barTintColor = UIColor.red
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.red]
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         application.statusBarStyle = .lightContent
         
         

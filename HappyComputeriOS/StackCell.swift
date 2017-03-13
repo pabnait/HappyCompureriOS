@@ -1,5 +1,5 @@
 //
-//  DueBlanceCell.swift
+//  StackCell.swift
 //  HappyComputeriOS
 //
 //  Created by Mazharul on 3/13/17.
@@ -8,13 +8,16 @@
 
 import UIKit
 
-class DueBlanceCell: UITableViewCell {
-    @IBOutlet var DueCustomerInvoiceLabel: UILabel!
-    @IBOutlet var DueCustomerAmmountLabel: UILabel!
-    @IBOutlet var DueCustomerCellLabel: UILabel!
-    @IBOutlet var DueCoustomerNameLabel: UILabel!
+class StackCell: UITableViewCell {
+    @IBOutlet var ProductAmmountCell: UILabel!
 
+    @IBOutlet var ProductName: UILabel!
+    @IBOutlet var ProductAmmount: UILabel!
+    
+    
+    
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
     }
