@@ -26,6 +26,7 @@
 		944A10E21E7651B900530AC3 /* BlanceNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10E11E7651B900530AC3 /* BlanceNavi.swift */; };
 		944A10E41E7654D300530AC3 /* StackNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10E31E7654D300530AC3 /* StackNavi.swift */; };
 		944A10E61E767FD200530AC3 /* StackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10E51E767FD200530AC3 /* StackCell.swift */; };
+		9492DF651E7CF83E002C317D /* DidSeleteDueBlanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492DF641E7CF83E002C317D /* DidSeleteDueBlanceCell.swift */; };
 		94A8010F1E75B65300A234AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8010E1E75B65300A234AC /* AppDelegate.swift */; };
 		94A801141E75B65400A234AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A801121E75B65400A234AC /* Main.storyboard */; };
 		94A801161E75B65400A234AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94A801151E75B65400A234AC /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		944A10E11E7651B900530AC3 /* BlanceNavi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlanceNavi.swift; sourceTree = "<group>"; };
 		944A10E31E7654D300530AC3 /* StackNavi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackNavi.swift; sourceTree = "<group>"; };
 		944A10E51E767FD200530AC3 /* StackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackCell.swift; sourceTree = "<group>"; };
+		9492DF641E7CF83E002C317D /* DidSeleteDueBlanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidSeleteDueBlanceCell.swift; sourceTree = "<group>"; };
 		94A8010B1E75B65300A234AC /* HappyComputeriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyComputeriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A8010E1E75B65300A234AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94A801131E75B65400A234AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				94A8010E1E75B65300A234AC /* AppDelegate.swift */,
 				94A801121E75B65400A234AC /* Main.storyboard */,
+				9492DF641E7CF83E002C317D /* DidSeleteDueBlanceCell.swift */,
 				944A10E51E767FD200530AC3 /* StackCell.swift */,
 				944A10E31E7654D300530AC3 /* StackNavi.swift */,
 				944A10DD1E76519500530AC3 /* SellNavi.swift */,
@@ -317,6 +320,7 @@
 				944A10D01E76503A00530AC3 /* Due Blance.swift in Sources */,
 				944A10DA1E7650F200530AC3 /* CustomerSelectProduct.swift in Sources */,
 				944A10E21E7651B900530AC3 /* BlanceNavi.swift in Sources */,
+				9492DF651E7CF83E002C317D /* DidSeleteDueBlanceCell.swift in Sources */,
 				944A10D41E76509600530AC3 /* ExtraCostCell.swift in Sources */,
 				944A10CE1E764FF700530AC3 /* Extra Cost.swift in Sources */,
 				944A10E01E7651A700530AC3 /* InputNavi.swift in Sources */,

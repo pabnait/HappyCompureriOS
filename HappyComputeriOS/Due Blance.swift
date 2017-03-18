@@ -14,8 +14,6 @@ class Due_Blance: UITableViewController {
 
     var DueCustmomerName  = [String]()
     
-    
-    
       var DueCustomerAmmount = [String]()
       var DueCustomerCell = [String]()
       var DueCustomerInvoice = [String]()
@@ -24,11 +22,12 @@ class Due_Blance: UITableViewController {
     
     override func viewDidLoad() {
         
-        self.title = "Due Blance History"
+        
         super.viewDidLoad()
         
         
         DueBlancedownloadFromURL()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(addTapped))
         
     }
     
@@ -101,5 +100,18 @@ class Due_Blance: UITableViewController {
         
         
     }
+    
+    
+
+    
+    
+    
+    
+    func addTapped(){
+        
+        
+        tableView.reloadData()
+    }
+    
     
 }
