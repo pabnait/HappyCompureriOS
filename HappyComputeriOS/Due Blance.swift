@@ -9,15 +9,16 @@
 import UIKit
 
 class Due_Blance: UITableViewController {
+    
+    var DueBlanceUrl = "http://khidirpurdegreecollege.edu.bd/DueBlance.php"
 
-    var DueCustmomerName  = ["Carrick","Brock","Benedict","David","Carter","Abbott","Abbott","Alexander","Cyril","Messi","Alexander"]
+    var DueCustmomerName  = [String]()
     
     
-      var DueCustomerAmmount = ["345","345","546","457","234","546","896","345","Cyril","7","465"]
     
-    var DueCustomerCell = ["0174131671","01711726384","01744342345","0713254332","01788124364","01734534534","01945353636","345","01941534346","0175442353","0183454632"]
-    
-    var DueCustomerInvoice = ["3465","3465","546","5647","2634","5466","8696","3645","6756","7567","4665"]
+      var DueCustomerAmmount = [String]()
+      var DueCustomerCell = [String]()
+      var DueCustomerInvoice = [String]()
     
     
     
@@ -25,6 +26,9 @@ class Due_Blance: UITableViewController {
         
         self.title = "Due Blance History"
         super.viewDidLoad()
+        
+        
+        DueBlancedownloadFromURL()
         
     }
     
@@ -50,9 +54,10 @@ class Due_Blance: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DueCell", for: indexPath) as! DueBlanceCell
         
         cell.DueCoustomerNameLabel.text! = DueCustmomerName[indexPath.row]
-        cell.DueCustomerAmmountLabel.text! = DueCustomerAmmount[indexPath.row]
         cell.DueCustomerCellLabel.text! = DueCustomerCell[indexPath.row]
+        cell.DueCustomerAmmountLabel.text! = DueCustomerAmmount[indexPath.row]
         cell.DueCustomerInvoiceLabel.text! = DueCustomerInvoice[indexPath.row]
+       
         
         
         
@@ -62,50 +67,39 @@ class Due_Blance: UITableViewController {
         return cell
     }
     
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    func DueBlancedownloadFromURL ()
+    {
+        let url = NSURL(string: DueBlanceUrl)
+        URLSession.shared.dataTask(with: (url as? URL)!, completionHandler: {(data, response, error) -> Void in
+            if let jsonObj = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? NSDictionary {
+                if let actorArray = jsonObj!.value(forKey: "Result") as? NSArray {
+                    for actor in actorArray{
+                        if let actorDict = actor as? NSDictionary {
+                            if let name = actorDict.value(forKey: "Name") {
+                                self.DueCustmomerName.append(name as! String)
+                            }
+                            if let Cell = actorDict.value(forKey: "Cell") {
+                                self.DueCustomerCell.append(Cell as! String)
+                            }
+                            if let Invoice = actorDict.value(forKey: "Invoice") {
+                                self.DueCustomerInvoice.append(Invoice as! String)
+                            }
+                            if let Ammount = actorDict.value(forKey: "Ammount") {
+                                self.DueCustomerAmmount.append(Ammount as! String)
+                                
+                            }
+                            
+                        }
+                    }
+                }
+                OperationQueue.main.addOperation({
+                    self.tableView.reloadData()
+                })
+            }
+        }).resume()
+        
+        
+        
+    }
     
 }
