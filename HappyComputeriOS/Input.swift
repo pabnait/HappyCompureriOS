@@ -34,16 +34,48 @@ class Input: UIViewController,UITextFieldDelegate {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
         textField.resignFirstResponder()
         return true
     }
     
+    
+    @IBAction func OnSubmitButtonClicked(_ sender: Any) {
+        
+       
+        
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "http://happybd.net/InputDataReceve.php")! as URL)
+        request.httpMethod = "POST"
+        
+        let postString = "providername=\(ProviderNameTextField.text!)&providercell=\(ProviderCellTextField.text!)&provideraddress=\(ProviderAddressTextfield.text!)&providerinvoice=\(ProviderInvoiceTextfield.text!)"
+        
+        request.httpBody = postString.data(using: String.Encoding.utf8)
+        
+        let task = URLSession.shared.dataTask(with: request as URLRequest) {
+            data, response, error in
+            
+            if error != nil {
+                print("error=\(error)")
+                return
+            }
+            
+            print("response = \(response)")
+            
+            let responseString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print("responseString = \(responseString)")
+        }
+        task.resume()
+
+        
+        
+    }
+    
+
 }
+    
+
 
 
