@@ -26,6 +26,7 @@
 		944A10E21E7651B900530AC3 /* BlanceNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10E11E7651B900530AC3 /* BlanceNavi.swift */; };
 		944A10E41E7654D300530AC3 /* StackNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10E31E7654D300530AC3 /* StackNavi.swift */; };
 		944A10E61E767FD200530AC3 /* StackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944A10E51E767FD200530AC3 /* StackCell.swift */; };
+		9451B0AE1E82757C0091556D /* Creact Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9451B0AD1E82757C0091556D /* Creact Account.swift */; };
 		9492DF651E7CF83E002C317D /* DidSeleteDueBlanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9492DF641E7CF83E002C317D /* DidSeleteDueBlanceCell.swift */; };
 		94A8010F1E75B65300A234AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8010E1E75B65300A234AC /* AppDelegate.swift */; };
 		94A801141E75B65400A234AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A801121E75B65400A234AC /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		944A10E11E7651B900530AC3 /* BlanceNavi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlanceNavi.swift; sourceTree = "<group>"; };
 		944A10E31E7654D300530AC3 /* StackNavi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackNavi.swift; sourceTree = "<group>"; };
 		944A10E51E767FD200530AC3 /* StackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackCell.swift; sourceTree = "<group>"; };
+		9451B0AD1E82757C0091556D /* Creact Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Creact Account.swift"; sourceTree = "<group>"; };
 		9492DF641E7CF83E002C317D /* DidSeleteDueBlanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DidSeleteDueBlanceCell.swift; sourceTree = "<group>"; };
 		94A8010B1E75B65300A234AC /* HappyComputeriOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyComputeriOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A8010E1E75B65300A234AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				94A8010E1E75B65300A234AC /* AppDelegate.swift */,
 				94A801121E75B65400A234AC /* Main.storyboard */,
+				9451B0AD1E82757C0091556D /* Creact Account.swift */,
 				9492DF641E7CF83E002C317D /* DidSeleteDueBlanceCell.swift */,
 				944A10E51E767FD200530AC3 /* StackCell.swift */,
 				944A10E31E7654D300530AC3 /* StackNavi.swift */,
@@ -327,6 +330,7 @@
 				944A10C81E764F0700530AC3 /* Sell.swift in Sources */,
 				944A10CC1E764FBE00530AC3 /* Skack.swift in Sources */,
 				944A10DC1E76512E00530AC3 /* Tabbar.swift in Sources */,
+				9451B0AE1E82757C0091556D /* Creact Account.swift in Sources */,
 				944A10DE1E76519500530AC3 /* SellNavi.swift in Sources */,
 				944A10D81E7650E100530AC3 /* ProviderSelectProduct.swift in Sources */,
 				944A10C21E764EA800530AC3 /* Home.swift in Sources */,

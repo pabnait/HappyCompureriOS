@@ -17,10 +17,13 @@ class Input: UIViewController,UITextFieldDelegate {
     @IBOutlet var ProviderAddressTextfield: UITextField!
     @IBOutlet var ProviderInvoiceTextfield: UITextField!
     
+  
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+   
         
         ProviderNameTextField.delegate = self
         ProviderCellTextField.delegate = self
