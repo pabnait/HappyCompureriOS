@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SOq-NO-G3K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gxz-7T-lwJ">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SjO-MQ-3H8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="722" y="1487"/>
+            <point key="canvasLocation" x="653" y="2126"/>
         </scene>
         <!--Extra Cost-->
         <scene sceneID="TEF-1V-pZq">
@@ -226,7 +226,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejN-Yd-5ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417.5" y="2283.8028169014083"/>
+            <point key="canvasLocation" x="1457" y="2262"/>
         </scene>
         <!--Did Selete Due Blance Cell-->
         <scene sceneID="S2U-X7-2u4">
@@ -1099,6 +1099,47 @@
             </objects>
             <point key="canvasLocation" x="-73" y="2262"/>
         </scene>
+        <!--More-->
+        <scene sceneID="TQY-jq-P26">
+            <objects>
+                <tableViewController id="cCR-n4-IrH" customClass="More" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="Sdo-IX-ALi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoreCell" rowHeight="50" id="1B6-zV-dsS" customClass="MoreCell" customModule="HappyComputeriOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1B6-zV-dsS" id="Owq-1s-QZo">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aG-Lb-Aob">
+                                            <rect key="frame" x="18" y="8" width="302" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="NameLabel" destination="7aG-Lb-Aob" id="j4R-tX-laN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="cCR-n4-IrH" id="sFd-pt-fhO"/>
+                            <outlet property="delegate" destination="cCR-n4-IrH" id="ulW-7E-fyC"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="CjE-mD-q2D"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lfd-xM-ecc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721.875" y="1448.2394366197184"/>
+        </scene>
         <!--Stack Product-->
         <scene sceneID="MUc-LR-I0u">
             <objects>
@@ -1256,11 +1297,11 @@
             </objects>
             <point key="canvasLocation" x="-801" y="685"/>
         </scene>
-        <!--Blance-->
+        <!--More-->
         <scene sceneID="h2l-N0-cz9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9vr-Z0-xT7" customClass="BlanceNavi" customModule="HappyComputeriOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Blance" image="004-coin" id="1aV-Fe-opo"/>
+                    <tabBarItem key="tabBarItem" title="More" image="more" id="1aV-Fe-opo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uur-T9-OCQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1268,7 +1309,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Oib-JL-nIH" kind="relationship" relationship="rootViewController" id="IdE-Ru-ILF"/>
+                        <segue destination="cCR-n4-IrH" kind="relationship" relationship="rootViewController" id="6jv-nr-gcq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FI3-2l-W96" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1336,8 +1377,8 @@
     <resources>
         <image name="002-real-estate" width="32" height="32"/>
         <image name="003-compose" width="32" height="32"/>
-        <image name="004-coin" width="32" height="32"/>
         <image name="005-shopping-cart-1" width="32" height="32"/>
+        <image name="more" width="32" height="32"/>
         <image name="user" width="32" height="32"/>
     </resources>
 </document>
